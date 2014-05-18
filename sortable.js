@@ -181,7 +181,7 @@ angular.module('ui.sortable', [])
               if (!ui.item.sortable.isCanceled()) {
                 scope.$apply(function () {
                   if (element.sortable('option', 'copy')) {
-                    ui.item.sortable.moved = angular.copy(ngModel.$modelValue[ui.item.sortable.index]);
+                    ui.item.sortable.moved = ngModel.$modelValue[ui.item.sortable.index];
                   } else {
                     ui.item.sortable.moved = ngModel.$modelValue.splice(
                       ui.item.sortable.index, 1)[0];
